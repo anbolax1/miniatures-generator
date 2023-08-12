@@ -1,0 +1,11 @@
+1. Скрипт для создания тестовые строк:
+
+INSERT INTO `product` (`id`, `image`, `is_deleted`) VALUES (1, 'test.img', 0);
+INSERT INTO `product` (`id`, `image`, `is_deleted`) VALUES (2, 'test2.img', 0);
+
+INSERT INTO `store_product` (`id`, `product_id`, `image`) VALUES (1, 1, 'test11.img');
+INSERT INTO `store_product` (`id`, `product_id`, `image`) VALUES (2, 2, 'test22.img');
+
+2. Команда:
+
+yii images/generate-miniature "100,200x300,500x600" true true
