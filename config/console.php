@@ -26,6 +26,9 @@ $config = [
             ],
         ],
         'db' => $db,
+        'Images' => [
+            'class' => 'app\components\images\Images'
+        ]
     ],
     'params' => $params,
     /*
