@@ -35,7 +35,7 @@ class m230812_170242_create_tables extends Migration
         $this->createTable('{{%store_product}}', [
             'id' => $this->primaryKey(),
             'product_id' => $this->integer()->null(),
-            'image' => $this->string()->null()->comment("Ссылка на изображение"),
+            'product_image' => $this->string()->null()->comment("Ссылка на изображение"),
         ], $tableOptions);
 
         $this->addForeignKey(

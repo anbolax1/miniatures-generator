@@ -9,7 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property int|null $product_id
- * @property string|null $image Ссылка на изображение
+ * @property string|null $product_image Ссылка на изображение
  *
  * @property Product $product
  */
@@ -30,7 +30,7 @@ class StoreProduct extends \yii\db\ActiveRecord
     {
         return [
             [['product_id'], 'integer'],
-            [['image'], 'string', 'max' => 255],
+            [['product_image'], 'string', 'max' => 255],
             [['product_id'], 'exist', 'skipOnError' => true, 'targetClass' => Product::class, 'targetAttribute' => ['product_id' => 'id']],
         ];
     }
@@ -43,7 +43,7 @@ class StoreProduct extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'product_id' => 'Product ID',
-            'image' => 'Image',
+            'product_image' => 'Product Image',
         ];
     }
 
